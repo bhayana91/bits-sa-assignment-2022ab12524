@@ -23,12 +23,13 @@ Download Minikube
     brew install minikube
 
 After running minikube start, which spins up a local cluster, running few commands to check the status of the cluster.
+    ```
     kubectl version
     kubectl version --client
     minikube status
     minikube ip
     minikube service list
-
+    ```
 Now to get the deployment status, we run     
     kubectl get deployments
 
