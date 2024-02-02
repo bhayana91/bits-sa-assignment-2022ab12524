@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-flask-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pyflask
+  template:
+    metadata:
+      labels:
+        app: pyflask
+    spec:
+      containers:
+      - name: pyflask
+        image: sidhantbhayana170/bits-assignment:2022ab12524
+        ports:
+        - containerPort: 8080
